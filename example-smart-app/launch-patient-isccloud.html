@@ -25,9 +25,17 @@
     <!-- https://github.com/cerner/fhir-client-cerner-additions -->
     <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
     <script>
+//       FHIR.oauth2.authorize({
+//         'client_id': 'u31fgtfopr5o08nnbkpu3jsuc',
+//         'scope':  'patient/Patient.read patient/Observation.read launch/patient online_access openid profile'
+//       });
+        
       FHIR.oauth2.authorize({
-        'client_id': 'u31fgtfopr5o08nnbkpu3jsuc',
-        'scope':  'patient/Patient.read patient/Observation.read launch/patient online_access openid profile'
+        "client_id": "u31fgtfopr5o08nnbkpu3jsuc",
+        "clientSecret": "1vqmah0otsiirbrltphb4cp0haoi5pac59rt7ddefd9kj0jaf6ln",
+        "scope": "openid profile user/*.*",
+        "redirect_uri": "https://jrpereirajr.github.io/smart-on-fhir-tutorial/example-smart-app/index.html",
+        "iss": "https://fhirauth.mrxfu71pjkah.static-test-account.isccloud.io/oauth2"
       });
     </script>
     <div class="spinner">
